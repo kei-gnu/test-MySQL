@@ -1,0 +1,10 @@
+version: "3"
+services:
+  mysql:
+    build: .
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d  # データをマウント
+    image: kei_mysql_world
+    environment: 
+      - MYSQL_ROOT_PASSWORD=mysql
+
